@@ -1,0 +1,3 @@
+{
+  "postCreateCommand": "bundle install && npm install && rake serve"
+}
