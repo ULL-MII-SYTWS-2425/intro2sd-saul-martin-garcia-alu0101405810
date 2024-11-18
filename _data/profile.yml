@@ -1,0 +1,14 @@
+career: "Ingeniería Informática"
+age: 21
+job_title: "Desarrollador Back End"
+current_study: "Máster en Ingeniería Informática"
+technologies:
+  languages: ["Python", "Java", "TypeScript", "C++", "SQL"]
+  frameworks: ["Spring", "Nest.js"]
+  databases: ["MySQL", "PostgreSQL", "MongoDB"]
+  tools: ["Git", "Docker", "Jenkins"]
+linkedin:
+  name: "Saúl Martín García"
+  url: "https://www.linkedin.com/in/saúl-martín-garcía-686632246/"
+contact:
+  email: "saulmargar2@gmail.com"
