@@ -325,7 +325,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  ffi (>= 1.15)
+  ffi (~> 1.17.0)
   github-pages
   jekyll-algolia
   jekyll-feed
