@@ -17,17 +17,14 @@ foo:
       - title: "Child Link 3"
         url: /child-3-page-url/
 
-
 # main links
 main:
   - title: "Contacto"
     url: /about/
-  - title: "Sample Posts"
+  - title: "Posts"
     url: /year-archive/
-  - title: "Sample Collections"
+  - title: "Colecciones"
     url: /collection-archive/
-
-
 
 # documentation links
 docs:

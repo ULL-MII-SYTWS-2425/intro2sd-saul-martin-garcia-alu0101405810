@@ -5,10 +5,13 @@ image: "/assets/images/rugby.jpeg"
 ---
 
 ## Descripción
+
 > El rugby es un deporte en el que dos equipos de 15 jugadores luchan por anotar puntos llevando el balón hasta la zona de anotación del equipo contrario.
 
 ## Cómo se juega
+
 > El balón puede ser pateado, lanzado o llevado por los jugadores. El objetivo es cruzar la línea de meta del adversario o anotar en el campo contrario mediante un gol.
 
 ## Imagen
-![Rugby]({{ page.image }})
+
+{% include figure image_path="/assets/images/rugby.jpeg" alt="Rugby" caption="Rugby" class="full" %}

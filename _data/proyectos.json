@@ -1,0 +1,22 @@
+{
+  "proyectos": [
+    {
+      "titulo": "Proyecto Web Personal",
+      "descripcion": "Desarrollo de un sitio web personal utilizando Jekyll y GitHub Pages",
+      "tecnologias": ["Jekyll", "HTML", "CSS", "JavaScript"],
+      "imagen": "/assets/images/300x200.png",
+      "url": "https://github.com",
+      "fecha": "2024",
+      "estado": "Completado"
+    },
+    {
+      "titulo": "App de Gestión de Tareas",
+      "descripcion": "Aplicación para gestionar tareas diarias y proyectos personales",
+      "tecnologias": ["React", "Node.js", "MongoDB"],
+      "imagen": "/assets/images/300x200.png",
+      "url": "https://github.com",
+      "fecha": "2023",
+      "estado": "En desarrollo"
+    }
+  ]
+}
