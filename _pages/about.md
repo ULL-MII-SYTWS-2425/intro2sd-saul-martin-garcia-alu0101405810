@@ -54,3 +54,7 @@ Me apasiona aprender y explorar nuevas tecnologías y tendencias en el desarroll
   </div>
 </div>
 {% endfor %}
+
+## Enlace al despliegue en Netlify
+
+[Despliegue en Netlify](https://intro2sd-saul-martin-garcia-alu010140.netlify.app/)
