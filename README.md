@@ -1,4 +1,4 @@
-# Práctca "Introduction to Systems Development" and Static Generators
+# Práctica: Jekyll search
 
 Autor: Saúl Martín García
 
@@ -8,72 +8,44 @@ Curso: 2024-2025
 
 Universidad de La Laguna
 
-## Desplegar la página en GitHub Pages
+## Busca en todos los ficheros, no solo los de los posts sino también los de las páginas
 
-La aplicación se ha desplegado en [GitHub Pages](https://ull-mii-sytws-2425.github.io/intro2sd-saul-martin-garcia-alu0101405810/).
+Para que busque en los ficheros de las páginas, el fichero `search.json` contiene el siguiente código que asigna a la variable de de busqueda no solo los ficheros de los posts sino también los de las páginas:
 
-El comando utilizadopara desplegar la página es:
+```json
+    {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' |
+    where_exp:'doc','doc.title != null' %}
 
-```bash
-bundle exec jekyll serve
+    {% for page in pages %}
+      {
+        "title": {{ page.title | jsonify }},
+        "excerpt": {{ page.excerpt | markdownify | strip_html | jsonify }},
+        "content": {{ page.content | markdownify | strip_html | jsonify }},
+        "url": {{ site.baseurl | append: page.url | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
 ```
 
-## Resumen de libro
+## Admite expresiones regulares
 
-El resumen del Capítulo 1: Introduction to Systems Development del libro "Developing Information Systems : Practical Guidance for IT Professionals" se encuentra en esta [página](https://ull-mii-sytws-2425.github.io/intro2sd-saul-martin-garcia-alu0101405810/post%20formats/informe/).
+![regex](readmeImages/regex.png)
 
-## GitHub Board
+## Los resultados vayan apareciendo conforme tecleamos
 
-Se usa el table de GitHub para gestionar las tareas del proyecto.
+![results](readmeImages/results.gif)
 
-![Board](./readmeImages/board.png)
+## Se muestra una lista de enlaces a los ficheros que contienen la expresión buscada y un resumen de las primeros caracteres del fichero
 
-## Despliegue en Netlify
+![sports](readmeImages/sports.png)
 
-Se ha desplegado la web en [Netlify](https://intro2sd-saul-martin-garcia-alu010140.netlify.app/).
+## El constructor de JekyllSearch recibe en un objeto los argumentos en vez de posicionalmente
 
-![Netlify](./readmeImages/netlify.png)
+![JekyllSearch](readmeImages/jekyllSearch.png)
 
-## Jekyll Collection
+## Se ha hecho un resumen del capítulo 2 Lifecycle types and their rationales del libro _Developing Information Systems_, editado by James Cadle
 
-Se han creado dos colecciones:
+![resume](readmeImages/resume.png)
 
-- \_sports: contiene posts relacionados con deportes.
+## Kanban Board project conteniendo las incidencias de la rúbrica
 
-![Sports](./readmeImages/sports.png)
-
-- \_activities: contiene posts relacionados con actividades.
-
-![Activities](./readmeImages/activities.png)
-
-## Uso de Liquid
-
-Se ha usado Liquid en diferentes partes del la página de contacto.
-
-Uno de los ejemplos es el siguiente:
-
-![Liquid](./readmeImages/liquid.png)
-
-Donde se usa liquid para mostrar las tecnologías que se manejan.
-
-## Uso de fichero .json en \_data
-
-Se ha creado un fichero .json en la carpeta \_data para almacenar los datos referentes a posibles proyectos realizados.
-
-![alt text](./readmeImages/proyectos.png)
-
-Estos datos despues se muestran en la página de about en una sección llamada "Mis Proyectos".
-
-![alt text](./readmeImages/proyectos2.png)
-
-Tambien se usa Liquid para mostrar estos datos en la página de about.
-
-![alt text](./readmeImages/liquid2.png)
-
-## Desarrollo de pagina personal en GitHUb
-
-![alt text](./readmeImages/github.png)
-
-## Pagina enlazada con el perfil de GitHub
-
-![alt text](./readmeImages/enlace.png)
+![board](readmeImages/board.png)
